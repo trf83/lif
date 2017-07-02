@@ -1,0 +1,143 @@
+/*
+* LAYOUT
+*/
+
+body, body *
+{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+#topo, #menu,  #conteudo , #rodape
+{ 
+	position: relative;
+	float: left;
+	width: 100%;
+	z-index: 10;	
+}
+
+#topo
+{
+	height: 100px;
+	background-color: #D0D0D0;	
+}
+
+#menu
+{
+	background-color: #064060;
+	height: 40px;
+	z-index: 99;
+}
+
+#rodape
+{
+	height: 40px;
+	background-color: #064060;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+
+	#topo-flex, #menu-flex, #conteudo-flex, #rodape-flex
+	{
+		position: relative;
+		min-width: 994px;
+		max-width: 1250px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+	#topo-flex, #menu-flex, #conteudo-flex, #rodape-flex
+	{
+		position: relative;
+		min-width: 738px;
+		max-width: 993px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	#topo-flex, #menu-flex, #conteudo-flex, #rodape-flex
+	{
+		position: relative;
+		min-width: 436px;
+		max-width: 737px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
+
+#topo-flex, #menu-flex, #rodape-flex
+{
+	height: 100%;
+}
+
+#logo-esquerda, #logo-direita
+{   
+	position: relative;
+	background-color: #BABABA;
+    width: 200px;
+	height: 100%;
+}
+
+#logo-esquerda
+{
+	float: left;
+} 
+
+#logo-direita
+{
+	float: right;
+}
+
+#menu-meio, #rodape-meio
+{
+	position: relative;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+}
+
+#conteudo-esquerda, #conteudo-meio, #conteudo-direita
+{
+	position: relative;
+	float: left;
+}
+
+#conteudo-meio
+{
+	width: 93%;
+}
+
+#conteudo-esquerda, #conteudo-direita
+{
+	width: 3%;
+}
+
+#conteudo-esquerda
+{
+	background: url('../images/left-f.png') repeat-y right;
+}
+
+#conteudo-direita
+{
+	background: url('../images/right-f.png') repeat-y left;
+}
+
+/*
+* FIM LAYOUT
+*/
+
+/*
+* FORM
+*/
+'
+/*
+* FIM FORM
+*/

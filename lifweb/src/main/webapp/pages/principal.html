@@ -1,0 +1,133 @@
+<form id="cadastro">
+	<table>
+		<tr>
+			<td>
+				<label><strong>Nome:</strong></label>
+			</td>
+
+			<td>
+				<input id="nome" type="text" name="nome"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="idade"><strong>Idade:</strong></label>
+			</td>
+
+			<td>
+				<input id="idade" type="text" name="idade"/>
+			</td>
+		</tr>
+		<tr>	
+			<td><strong>Tipo Fessoa:</strong></td>	
+			<td>
+				<label>
+					<input  id="fisica" type="radio" name="tipoPessoa.id" value="1" />F&iacute;sica
+				</label>
+				<label>
+					<input id="juridica" type="radio" name="tipoPessoa.id" value="2" />Jur&iacute;ca
+				</label>
+			</td>		
+		</tr>
+		<tr>
+			<td>
+				<strong>Estado:</strong>
+			</td>
+			<td>
+				<select  id="estado" name="cidade.estado.id">
+					<option value="1">São Paulo</option>
+					<option value="2">Rio de Janeiro</option>
+				</select>
+			</td>
+		</tr>
+		<tr>	
+			<td>
+				<strong>Cidade:</strong> 
+			</td>
+			<td>
+				<select  id="cidade" name="cidade.id">
+					<option value="1">Matão</option>
+					<option value="2">Angra dos Reis</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<fieldset>
+					<legend><strong>Telefones</strong></legend>
+					<table>						
+						<tr>
+							<td>
+								<label><strong>DDD</strong></label>
+							</td>
+							<td>
+								<input type="text" name="telefones[0].ddd" value="16" />			
+							</td>
+							<td>
+								<label><strong>Número</strong></label>
+							</td>
+							<td>
+								<input type="text" name="telefones[0].numero" value="3888-5555" />		
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label><strong>DDD</strong></label>
+							</td>
+							<td>
+								<input type="text" name="telefones[1].ddd" value="16" />			
+							</td>
+							<td>
+								<label><strong>Número</strong></label>
+							</td>
+							<td>
+								<input type="text" name="telefones[1].numero" value="3888-7777" />			
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label><strong>DDD</strong></label>
+							</td>
+							<td>
+								<input type="text" name="telefones[2].ddd" value="16" />			
+							</td>
+							<td>
+								<label><strong>Número</strong></label>
+							</td>
+							<td>
+								<input type="text" name="telefones[2].numero" value="3888-9999" />			
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</td>			
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+				<label for="nome"><strong>Carro:</strong></label>
+			</td>
+
+			<td>
+				<input id="carro" type="checkbox" name="veiculos[0].nome" value="Carro"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="moto"><strong>Moto:</strong></label>
+			</td>
+
+			<td>
+				<input id="moto" type="checkbox" name="veiculos[1].nome" value="Moto"/>
+			</td>
+		</tr>			
+	</table> 
+	<div id="resultado"></div>						
+</form>
+<form id="upload" action="/lifweb/lif/upload" method="post" enctype="multipart/form-data">
+		<input id="action" type="hidden" name="action" value="controlador.upload()" />
+	 	<input id="file" type="file" name="file" />
+	 	<input type="submit" value="Submit Comment" /> 
+</form> 
+<input type="button" value="excecutar" onclick="executar();">
